@@ -1,115 +1,178 @@
 body {
-  font-family: "Times New Roman", serif; /* Set font to Times New Roman */
-  margin: 0; /* Remove default margin */
-  line-height: 1.6; /* Improve text readability */
-  background-color: #f4f4f4; /* Light background color */
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
 }
 
 header {
-  background: yellowgreen; /* Dark background for header */
-  color: #fff; /* White text color */
+  background: yellowgreen;
+  color: #fff;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 5vw; /* Use viewport width for padding */
 }
 
 .nav-links {
-  list-style: none; /* Remove bullets from list */
-  display: flex; /* Use flexbox for alignment */
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-  margin: 0 15px; /* Space between links */
+  margin: 0 2vw; /* Relative spacing */
 }
 
 .nav-links a {
-  color: #fff; /* White color for links */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s; /* Transition effect for hover */
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #ffa500; /* Change color on hover */
+  color: #ffa500;
 }
 
 .container {
   display: flex;
-  align-items: center; /* Center image vertically */
+  align-items: center;
 }
 
 .theimage {
-  width: 60px; /* Set image width */
-  height: 60px; /* Set image height */
-  border-radius: 50%; /* Make it circular */
-  margin-left: 10px; /* Space between image and text */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
 .hero {
-  padding: 40px;
-  text-align: center; /* Center text */
-  background: #fff; /* White background */
+  padding: 40px 5vw;
+  text-align: center;
+  background: #fff;
 }
 
 .hero h1 {
-  font-size: 2.5rem; /* Larger font size for heading */
+  font-size: 2.5rem;
 }
 
 .btn {
-  display: inline-block; /* Make button an inline block */
-  background: yellowgreen; /* Dark button background */
-  color: #fff; /* White text */
-  padding: 10px 20px; /* Padding for button */
-  text-decoration: none; /* Remove underline */
-  border-radius: 5px; /* Round corners */
-  transition: background 0.3s; /* Transition effect */
+  display: inline-block;
+  background: yellowgreen;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #ffa500; /* Change background on hover */
+  background: #ffa500;
 }
 
 .about-me, .resume, .projects, .contact {
-  padding: 20px; /* Add padding */
-  background: #fff; /* White background for sections */
-  margin: 10px; /* Space between sections */
-  border-radius: 5px; /* Rounded corners */
+  padding: 20px;
+  background: #fff;
+  margin: 10px 5vw;
+  border-radius: 5px;
 }
 
 h2 {
-  margin-top: 0; /* Remove top margin */
+  margin-top: 0;
 }
 
 .project {
-  margin-bottom: 20px; /* Space below projects */
+  margin-bottom: 20px;
 }
 
 form {
-  display: flex; /* Use flexbox for form layout */
-  flex-direction: column; /* Stack elements vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 input, textarea {
-  margin-bottom: 10px; /* Space below inputs */
-  padding: 10px; /* Padding inside inputs */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Font size */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 button {
-  background: yellowgreen; /* Dark button background */
-  color: #fff; /* White text */
-  padding: 10px; /* Padding */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor on hover */
-  transition: background 0.3s; /* Transition effect */
+  background: yellowgreen;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: #ffa500; /* Change background on hover */
+  background: #ffa500;
+}
+
+/* Media Queries */
+
+/* For tablets (portrait mode) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+  }
+
+  .about-me, .resume, .projects, .contact {
+    margin: 10px 2vw;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 2vw;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .theimage {
+    margin: 10px auto;
+  }
+
+  .about-me, .resume, .projects, .contact {
+    padding: 15px;
+    margin: 10px 1vw;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+  }
 }
